@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CyberSecure Academy — Full</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <h1>CyberSecure Academy</h1>
+      <div class="top-actions">
+        <button id="themeToggle">Toggle Theme</button>
+        <button id="loginBtn">Login / Register</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <nav>
+          <button data-section="dashboard" class="nav-btn active">Pulpit</button>
+          <button data-section="lessons" class="nav-btn">Lekcje</button>
+          <button data-section="flashcards" class="nav-btn">Fiszki</button>
+          <button data-section="quizzes" class="nav-btn">Quizy</button>
+          <button data-section="projects" class="nav-btn">Projekty</button>
+          <button data-section="missions" class="nav-btn">Misje</button>
+          <button data-section="leaderboard" class="nav-btn">Ranking</button>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <div id="dashboard" class="section active">
+          <h2>Witaj!</h2>
+          <div id="recommended"></div>
+        </div>
+        <div id="lessons" class="section" style="display:none;"></div>
+        <div id="flashcards" class="section" style="display:none;">
+          <div id="flashcardBox" class="flashcard">Ładowanie fiszek...</div>
+          <div class="controls">
+            <button id="btnKnow" class="btn">Wiem</button>
+            <button id="btnDont" class="btn ghost">Nie wiem</button>
+            <button id="btnShuffle" class="btn ghost">Mieszaj</button>
+          </div>
+        </div>
+        <div id="quizzes" class="section" style="display:none;"></div>
+        <div id="projects" class="section" style="display:none;"></div>
+        <div id="missions" class="section" style="display:none;"></div>
+        <div id="leaderboard" class="section" style="display:none;"></div>
+      </section>
+    </main>
+
+    <footer class="footer">© CyberSecure Academy</footer>
+  </div>
+
+  <script src="js/firebase-config.js"></script>
+  <script src="js/flashcards.js"></script>
+  <script src="js/avatar.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
